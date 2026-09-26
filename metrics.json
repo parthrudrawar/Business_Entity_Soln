@@ -1,0 +1,83 @@
+{
+  "sample_modulo": 200,
+  "max_entities": 10000,
+  "per_channel": 300,
+  "max_candidates": 100,
+  "negative_per_entity": 12,
+  "feature_names": [
+    "name_equal",
+    "name_ratio",
+    "name_token_sort",
+    "name_token_set",
+    "name_core_equal",
+    "name_core_ratio",
+    "name_jaccard",
+    "name_containment",
+    "name_shared_tokens",
+    "name_length_ratio",
+    "name_first_token_equal",
+    "address_equal",
+    "address_ratio",
+    "address_token_sort",
+    "address_token_set",
+    "address_jaccard",
+    "address_containment",
+    "address_shared_tokens",
+    "address_number_overlap",
+    "address_number_conflict",
+    "address_number_equal",
+    "address_missing",
+    "address_length_ratio",
+    "source3",
+    "retrieval_channels"
+  ],
+  "candidate_recall": {
+    "development": 0.942572121865732,
+    "holdout": 0.9371900826446281
+  },
+  "baseline": {
+    "development": {
+      "threshold_s2": 0.6,
+      "threshold_s3": 0.99,
+      "macro_f05": 0.7909909843078955,
+      "pair_precision": 0.8639322916666666,
+      "pair_recall": 0.7155567538420059,
+      "predicted_links": 3072,
+      "true_links": 3709,
+      "correct_links": 2654,
+      "entities": 1039
+    },
+    "holdout": {
+      "macro_f05": 0.7802317376501263,
+      "pair_precision": 0.8579470198675496,
+      "pair_recall": 0.7137741046831956,
+      "predicted_links": 3020,
+      "true_links": 3630,
+      "correct_links": 2591,
+      "entities": 1065
+    }
+  },
+  "lightgbm": {
+    "best_iteration": 424,
+    "development": {
+      "threshold_s2": 0.75,
+      "threshold_s3": 0.99,
+      "macro_f05": 0.8821935896102994,
+      "pair_precision": 0.9474695707879565,
+      "pair_recall": 0.7975195470477218,
+      "predicted_links": 3122,
+      "true_links": 3709,
+      "correct_links": 2958,
+      "entities": 1039
+    },
+    "holdout": {
+      "macro_f05": 0.8855742291382604,
+      "pair_precision": 0.9440491591203105,
+      "pair_recall": 0.8041322314049587,
+      "predicted_links": 3092,
+      "true_links": 3630,
+      "correct_links": 2919,
+      "entities": 1065
+    }
+  }
+}
